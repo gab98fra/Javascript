@@ -1,3 +1,3 @@
 # Javascript
 <p>Formulario  </p>
-<img src="product.png" alt="">
+<img src="product.png" alt="producto">
