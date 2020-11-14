@@ -1,3 +1,14 @@
+/*
+    # ----------------------------------------------------------------------------
+    # Nombre:       app.js
+    # Autor:        Gabriel F
+    # GitHub:       https://github.com/gab98fra/
+    # Creado:       14 de Noviembre 2020
+    # Modificado:   14 de Noviembre 2020
+    # Copyright:    (c) 2020 by Gabriel F, 2020
+    # ----------------------------------------------------------------------------
+
+*/
 
 class Product{
     constructor(name, price, year){
