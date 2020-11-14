@@ -1,3 +1,3 @@
 # Javascript
 <p>Formulario  </p>
-<img src="product.png" alt="producto">
+<img src="https://github.com/gab98fra/Javascript/blob/main/product.PNG" alt="Producto">
