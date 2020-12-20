@@ -1,5 +1,5 @@
 
 # Código
-    Formulario con javascript
+    Formulario con javascript y Bootstrap
 # Visualización
-![](img/evi.PNG)
+![](Formulario/img/evi.PNG)
