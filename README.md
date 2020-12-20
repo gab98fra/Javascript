@@ -1,4 +1,5 @@
 
-# Formulario
-<p>Formulario: Ingresar productos y mostrarlos:  </p>
-<img src="https://github.com/gab98fra/Javascript/blob/main/product.PNG" alt="Producto">
+# Código
+    Formulario con javascript
+# Visualización
+![](img/evi.PNG)
