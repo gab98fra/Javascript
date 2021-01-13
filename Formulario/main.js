@@ -4,12 +4,11 @@
     # Autor:        Gabriel F
     # GitHub:       https://github.com/gab98fra/
     # Creado:       14 de Noviembre 2020
-    # Modificado:   11 de Enero 2021
+    # Modificado:   12 de Enero 2021
     # Copyright:    (c) 2020 by Gabriel F, 2020
     # ----------------------------------------------------------------------------
 
 */
-
 
 class Product 
 {
@@ -48,33 +47,24 @@ class Product
     {   
         const row=htmlElement.parentElement.parentElement;
         let td_All=row.querySelectorAll("td");
+        //const name=td_All[0].innerHTML;
+        //const price=td_All[1].innerHTML;
+        //const year=td_All[2].innerHTML;
 
-        const name=td_All[0].innerHTML;
-        const price=td_All[1].innerHTML;
-        const year=td_All[2].innerHTML;
-        
-        document.getElementById("name").value=name;
-        document.getElementById("price").value=price;
-        document.getElementById("year").value=year;
-        document.getElementById("button").value="Actualizar";
-        
+        swal(`Modificar:  ${td_All[0].innerHTML}`,"Ingresar el dato solicitado", {
+            content: {
+                element: "input",
+                attributes: {
+                        placeholder: `${td_All[0].innerHTML}`
+                        }
+              },
+            buttons: {cancel:"Cancelar",  confirm: "Aceptar"} })
 
-        document.getElementById("button")
-        .addEventListener("click",()=>{
-            if (document.getElementById("button").value=="Actualizar")
-            {
-            const new_Name = document.getElementById("name").value; 
-            const new_Price = document.getElementById("price").value;
-            const new_Year = document.getElementById("year").value;
-            
-            td_All[0].innerHTML=new_Name;
-            td_All[1].innerHTML=new_Price;
-            td_All[2].innerHTML=new_Year;
-            
-            document.getElementById("button").value="Registrar";
-            document.getElementById("Product-form").reset();
-
-            };
+        .then((value) =>{if (value)
+            {   
+                td_All[0].innerHTML=value;
+                this.showMessage("Producto actualizado", "info");
+            }
         });
     }
 
@@ -106,26 +96,19 @@ document.getElementById("Product-form").addEventListener("submit", function(e) {
    const price = document.getElementById("price").value;
    const year = document.getElementById("year").value;
    const product = new Product(name,price,year);
-
-   if (document.getElementById("button").value=="Registrar")
-    {
-        if (name!="" && price!="")
+    if (name!="" && price!="")
         {
         product.addProduct()
         product.showMessage("Se registró correctamente el producto", "success");
         }
         else   
             product.showMessage("Favor de ingresar los datos", "danger");
-    };    
+        
     e.preventDefault();
 });
 
-
 document.getElementById("product-list").addEventListener("click",(event)=>{
-
     const product = new Product();
-    //product.control(event.target);
-    
     if (event.target.name=="deletebtn")
         {
             product.deleProduct(event.target);
