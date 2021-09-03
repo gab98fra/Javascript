@@ -1,5 +1,6 @@
 
 # Código
-    Siéntate libre de utilizarlo y modificarlo
+   Formulario básico en javascript 
+   
 # Visualización
 ![](Formulario/img/evi.PNG)
